@@ -52,33 +52,32 @@ class HeartIcon: UIView {
 extension HeartIcon{
     
     class func createHeartIcon(_ onView: UIView, icon: UIImage, color: UIColor) -> HeartIcon{
-        let heartIcon = Init(HeartIcon(region:onView.bounds, icon: icon, color: color)){
+        let heartIcon = Init(HeartIcon(region:onView.frame, icon: icon, color: color)){
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.backgroundColor                           = .clear
         }
         onView.addSubview(heartIcon)
         
-        (heartIcon, onView) >>- [.centerX,.centerY]
-        
-        heartIcon >>- [.width,.height]
-        
         return heartIcon
     }
     
     func applyInit(){
-        let maskRegion  = contentRegion.size.scaleBy(0.7).rectCentered(at: contentRegion.center)
-        let shapeOrigin = CGPoint(x: -contentRegion.center.x, y: -contentRegion.center.y)
-        
+        let maskRegion  = contentRegion.size.scaleBy(1.0).rectCentered(at: contentRegion.center)
+        let imageRegion = contentRegion.size.scaleBy(1.43).rectCentered(at: contentRegion.center)
+        let imgCenterPoint = CGPoint(x: imageRegion.midX, y: imageRegion.midY)
         
         iconMask = Init(CALayer()){
             $0.contents      = iconImage.cgImage
             $0.contentsScale = UIScreen.main.scale
             $0.bounds        = maskRegion
+            $0.position     = imgCenterPoint
         }
         
         iconLayer = Init(CAShapeLayer()){
             $0.fillColor = iconColor.cgColor
-            $0.path      = UIBezierPath(rect: CGRect(origin: shapeOrigin, size: contentRegion.size)).cgPath
+            $0.bounds   = imageRegion
+            $0.position = imgCenterPoint
+            $0.path      = UIBezierPath(rect: imageRegion).cgPath
             $0.mask      = iconMask
         }
         

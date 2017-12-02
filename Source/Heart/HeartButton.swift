@@ -78,7 +78,7 @@ open class HeartButton: UIButton {
         applyInit()
     }
     
-    override public init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
@@ -170,7 +170,7 @@ extension HeartButton {
         heartIcon.animateSelect(isSelected, fillColor: color, duration: duration, delay: Const.heartIconShowDelay)
         
         if isSelected {
-            let radius           = bounds.size.scaleBy(1.3).width / 2 // ring radius
+            let radius           = bounds.size.scaleBy(1.86).width / 2 // ring radius
             let igniteFromRadius = radius * 0.8
             let igniteToRadius   = radius * 1.1
             
