@@ -1,6 +1,6 @@
 //
-//  FaveIcon.swift
-//  FaveButton
+//  HeartIcon.swift
+//  HeartButton
 //
 // Copyright © 2016 Jansel Valentin.
 //
@@ -24,7 +24,7 @@
 
 import UIKit
 
-class FaveIcon: UIView {
+class HeartIcon: UIView {
     
     var iconColor: UIColor = .gray
     var iconImage: UIImage!
@@ -49,20 +49,20 @@ class FaveIcon: UIView {
 
 
 // MARK: create
-extension FaveIcon{
+extension HeartIcon{
     
-    class func createFaveIcon(_ onView: UIView, icon: UIImage, color: UIColor) -> FaveIcon{
-        let faveIcon = Init(FaveIcon(region:onView.bounds, icon: icon, color: color)){
+    class func createHeartIcon(_ onView: UIView, icon: UIImage, color: UIColor) -> HeartIcon{
+        let heartIcon = Init(HeartIcon(region:onView.bounds, icon: icon, color: color)){
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.backgroundColor                           = .clear
         }
-        onView.addSubview(faveIcon)
+        onView.addSubview(heartIcon)
         
-        (faveIcon, onView) >>- [.centerX,.centerY]
+        (heartIcon, onView) >>- [.centerX,.centerY]
         
-        faveIcon >>- [.width,.height]
+        heartIcon >>- [.width,.height]
         
-        return faveIcon
+        return heartIcon
     }
     
     func applyInit(){
@@ -88,7 +88,7 @@ extension FaveIcon{
 
 
 // MARK : animation
-extension FaveIcon{
+extension HeartIcon{
     
     func animateSelect(_ isSelected: Bool = false, fillColor: UIColor, duration: Double = 0.5, delay: Double = 0){
         if nil == tweenValues{

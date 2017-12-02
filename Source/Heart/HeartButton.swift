@@ -1,6 +1,6 @@
 //
-//  FaveButton.swift
-//  FaveButton
+//  HeartButton.swift
+//  HeartButton
 //
 // Copyright © 2016 Jansel Valentin.
 //
@@ -24,29 +24,25 @@
 
 import UIKit
 
-
-
-public typealias DotColors = (first: UIColor, second: UIColor)
-
-public protocol FaveButtonDelegate{
-    func faveButton(_ faveButton: FaveButton, didSelected selected: Bool)
+public protocol HeartButtonDelegate{
+    func heartButton(_ heartButton: HeartButton, didSelected selected: Bool)
     
-    func faveButtonDotColors(_ faveButton: FaveButton) -> [DotColors]?
+    func heartButtonDotColors(_ heartButton: HeartButton) -> [DotColors]?
 }
 
 
 // MARK: Default implementation
-public extension FaveButtonDelegate{
-    func faveButtonDotColors(_ faveButton: FaveButton) -> [DotColors]?{ return nil }
+public extension HeartButtonDelegate{
+    func heartButtonDotColors(_ heartButton: HeartButton) -> [DotColors]?{ return nil }
 }
 
-open class FaveButton: UIButton {
+open class HeartButton: UIButton {
     
     fileprivate struct Const{
         static let duration             = 1.0
         static let expandDuration       = 0.1298 
         static let collapseDuration     = 0.1089
-        static let faveIconShowDelay    = Const.expandDuration + Const.collapseDuration/2.0
+        static let heartIconShowDelay   = Const.expandDuration + Const.collapseDuration / 2.0
         static let dotRadiusFactors     = (first: 0.0633, second: 0.04)
     }
     
@@ -56,28 +52,28 @@ open class FaveButton: UIButton {
     @IBInspectable open var dotSecondColor: UIColor  = UIColor(red: 247/255, green: 188/255, blue: 48/255,  alpha: 1)
     @IBInspectable open var circleFromColor: UIColor = UIColor(red: 221/255, green: 70/255,  blue: 136/255, alpha: 1)
     @IBInspectable open var circleToColor: UIColor   = UIColor(red: 205/255, green: 143/255, blue: 246/255, alpha: 1)
+    @IBInspectable open var colorfulDots: Bool = false
     
     @IBOutlet open weak var delegate: AnyObject?
     
     fileprivate(set) var sparkGroupCount: Int = 7
     
-    fileprivate var faveIconImage:UIImage?
-    fileprivate var faveIcon: FaveIcon!
+    fileprivate var heartIconImage: UIImage?
+    fileprivate var heartIcon: HeartIcon!
     
-    
-    override open var isSelected: Bool{
+    override open var isSelected: Bool {
         didSet{
             animateSelect(self.isSelected, duration: Const.duration)
         }
     }
     
-    convenience public init(frame: CGRect, faveIconNormal: UIImage?) {
+    convenience public init(frame: CGRect, heartIconNormal: UIImage?) {
         self.init(frame: frame)
         
-        guard let icon = faveIconNormal else{
+        guard let icon = heartIconNormal else {
             fatalError("missing image for normal state")
         }
-        faveIconImage = icon
+        heartIconImage = icon
         
         applyInit()
     }
@@ -94,14 +90,14 @@ open class FaveButton: UIButton {
 
 
 // MARK: create
-extension FaveButton{
-    fileprivate func applyInit(){
+extension HeartButton {
+    fileprivate func applyInit() {
         
-        if nil == faveIconImage{
-            faveIconImage = image(for: UIControlState())
+        if nil == heartIconImage {
+            heartIconImage = image(for: UIControlState())
         }
         
-        guard let faveIconImage = faveIconImage else{
+        guard let heartIconImage = heartIconImage else {
             fatalError("please provide an image for normal state.")
         }
         
@@ -110,43 +106,46 @@ extension FaveButton{
         setTitle(nil, for: UIControlState())
         setTitle(nil, for: .selected)
         
-        faveIcon  = createFaveIcon(faveIconImage)
-        
-        addActions()
+        heartIcon  = createHeartIcon(heartIconImage)
     }
     
-    
-    fileprivate func createFaveIcon(_ faveIconImage: UIImage) -> FaveIcon{
-        return FaveIcon.createFaveIcon(self, icon: faveIconImage,color: normalColor)
+    fileprivate func createHeartIcon(_ heartIconImage: UIImage) -> HeartIcon {
+        return HeartIcon.createHeartIcon(self, icon: heartIconImage,color: normalColor)
     }
     
-    
-    fileprivate func createSparks(_ radius: CGFloat) -> [Spark] {
-        var sparks    = [Spark]()
-        let step      = 360.0/Double(sparkGroupCount)
+    fileprivate func createHeartSparks(_ radius: CGFloat) -> [HeartSpark] {
+        var sparks    = [HeartSpark]()
+        let step      = 360.0 / Double(sparkGroupCount)
         let base      = Double(bounds.size.width)
         let dotRadius = (base * Const.dotRadiusFactors.first, base * Const.dotRadiusFactors.second)
         let offset    = 10.0
         
-        for index in 0..<sparkGroupCount{
+        for index in 0 ..< sparkGroupCount{
             let theta  = step * Double(index) + offset
             let colors = dotColors(atIndex: index)
             
-            let spark  = Spark.createSpark(self, radius: radius, firstColor: colors.first,secondColor: colors.second, angle: theta,
+            let spark  = HeartSpark.createHeartSpark(self, radius: radius, firstColor: colors.first,secondColor: colors.second, angle: theta,
                                            dotRadius: dotRadius)
             sparks.append(spark)
         }
         return sparks
     }
-}
-
-
-// MARK: utils
-
-extension FaveButton{
-    fileprivate func dotColors(atIndex index: Int) -> DotColors{
-        if case let delegate as FaveButtonDelegate = delegate , nil != delegate.faveButtonDotColors(self){
-            let colors     = delegate.faveButtonDotColors(self)!
+    
+    fileprivate func dotColors(atIndex index: Int) -> DotColors {
+        if case let delegate as HeartButtonDelegate = delegate , nil != delegate.heartButtonDotColors(self){
+            let colors     = delegate.heartButtonDotColors(self)!
+            let colorIndex = 0..<colors.count ~= index ? index : index % colors.count
+            
+            return colors[colorIndex]
+        }
+        if colorfulDots {
+            let colors = [
+                DotColors(first: UIColor.rgb(0x7DC2F4), second: UIColor.rgb(0xE2264D)),
+                DotColors(first: UIColor.rgb(0xF8CC61), second: UIColor.rgb(0x9BDFBA)),
+                DotColors(first: UIColor.rgb(0xAF90F4), second: UIColor.rgb(0x90D1F9)),
+                DotColors(first: UIColor.rgb(0xE9A966), second: UIColor.rgb(0xF8C852)),
+                DotColors(first: UIColor.rgb(0xF68FA7), second: UIColor.rgb(0xF6A2B8))
+            ]
             let colorIndex = 0..<colors.count ~= index ? index : index % colors.count
             
             return colors[colorIndex]
@@ -155,69 +154,36 @@ extension FaveButton{
     }
 }
 
-
 // MARK: actions
-extension FaveButton{
-    func addActions(){
-        self.addTarget(self, action: #selector(toggle(_:)), for: .touchUpInside)
-    }
-    
-    @objc func toggle(_ sender: FaveButton){
-        sender.isSelected = !sender.isSelected
-        
-        guard case let delegate as FaveButtonDelegate = self.delegate else{
-            return
-        }
-        
-        let delay = DispatchTime.now() + Double(Int64(Double(NSEC_PER_SEC) * Const.duration)) / Double(NSEC_PER_SEC)
-        DispatchQueue.main.asyncAfter(deadline: delay){
-            delegate.faveButton(sender, didSelected: sender.isSelected)
-        }
+extension HeartButton {
+    open func toggle() {
+        isSelected = !isSelected
+        self.animateSelect(self.isSelected, duration: 1.0)
     }
 }
 
-
 // MARK: animation
-extension FaveButton{
-    fileprivate func animateSelect(_ isSelected: Bool, duration: Double){
+extension HeartButton {
+    fileprivate func animateSelect(_ isSelected: Bool, duration: Double) {
         let color  = isSelected ? selectedColor : normalColor
         
-        faveIcon.animateSelect(isSelected, fillColor: color, duration: duration, delay: Const.faveIconShowDelay)
+        heartIcon.animateSelect(isSelected, fillColor: color, duration: duration, delay: Const.heartIconShowDelay)
         
-        if isSelected{
-            let radius           = bounds.size.scaleBy(1.3).width/2 // ring radius
-            let igniteFromRadius = radius*0.8
-            let igniteToRadius   = radius*1.1
+        if isSelected {
+            let radius           = bounds.size.scaleBy(1.3).width / 2 // ring radius
+            let igniteFromRadius = radius * 0.8
+            let igniteToRadius   = radius * 1.1
             
-            let ring   = Ring.createRing(self, radius: 0.01, lineWidth: 3, fillColor: self.circleFromColor)
-            let sparks = createSparks(igniteFromRadius)
+            let ring = HeartRing.createHeartRing(self, radius: 0.01, lineWidth: 3, fillColor: self.circleFromColor)
+            let sparks = createHeartSparks(igniteFromRadius)
             
             ring.animateToRadius(radius, toColor: circleToColor, duration: Const.expandDuration, delay: 0)
             ring.animateColapse(radius, duration: Const.collapseDuration, delay: Const.expandDuration)
 
-            sparks.forEach{
-                $0.animateIgniteShow(igniteToRadius, duration:0.4, delay: Const.collapseDuration/3.0)
+            sparks.forEach {
+                $0.animateIgniteShow(igniteToRadius, duration:0.4, delay: Const.collapseDuration / 3.0)
                 $0.animateIgniteHide(0.7, delay: 0.2)
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

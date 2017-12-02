@@ -1,6 +1,6 @@
 //
-//  Spark.swift
-//  FaveButton
+//  HeartSpark.swift
+//  HeartButton
 //
 // Copyright © 2016 Jansel Valentin.
 //
@@ -24,9 +24,7 @@
 
 import UIKit
 
-internal typealias DotRadius = (first: Double, second: Double)
-
-class Spark: UIView {
+class HeartSpark: UIView {
     
     fileprivate struct Const{
         static let distance           = (vertical: 4.0, horizontal: 0.0)
@@ -66,19 +64,19 @@ class Spark: UIView {
 
 
 // MARK: create
-extension Spark{
+extension HeartSpark {
     
-    class func createSpark(_ faveButton: FaveButton, radius: CGFloat, firstColor: UIColor, secondColor: UIColor, angle: Double, dotRadius: DotRadius) -> Spark{
+    class func createHeartSpark(_ heartButton: HeartButton, radius: CGFloat, firstColor: UIColor, secondColor: UIColor, angle: Double, dotRadius: DotRadius) -> HeartSpark{
         
-        let spark = Init(Spark(radius: radius, firstColor: firstColor, secondColor: secondColor, angle: angle, dotRadius: dotRadius)){
+        let spark = Init(HeartSpark(radius: radius, firstColor: firstColor, secondColor: secondColor, angle: angle, dotRadius: dotRadius)){
             $0.translatesAutoresizingMaskIntoConstraints = false
             $0.backgroundColor                           = .clear
             $0.layer.anchorPoint                         = CGPoint(x: 0.5, y: 1)
             $0.alpha                                     = 0.0
         }
-        faveButton.superview?.insertSubview(spark, belowSubview: faveButton)
+        heartButton.superview?.insertSubview(spark, belowSubview: heartButton)
         
-        (spark, faveButton) >>- [.centerX, .centerY]
+        (spark, heartButton) >>- [.centerX, .centerY]
         
         let width = CGFloat((dotRadius.first * 2.0 + dotRadius.second * 2.0) + Const.distance.horizontal)
         spark >>- {
@@ -98,7 +96,7 @@ extension Spark{
     
     
     fileprivate func applyInit(){
-        dotFirst  = createDotView(dotRadius.first,  fillColor: firstColor)
+        dotFirst  = createDotView(dotRadius.first, fillColor: firstColor)
         dotSecond = createDotView(dotRadius.second, fillColor: secondColor)
         
         
@@ -149,7 +147,7 @@ extension Spark{
 }
 
 // MARK: animation
-extension Spark{
+extension HeartSpark {
     func animateIgniteShow(_ radius: CGFloat, duration:Double, delay: Double = 0){
         self.layoutIfNeeded()
         
@@ -221,9 +219,3 @@ extension Spark{
         })
     }
 }
-
-
-
-
-
-

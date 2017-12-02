@@ -22,8 +22,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import Foundation
+import UIKit
 
+public typealias DotColors = (first: UIColor, second: UIColor)
+public typealias DotRadius = (first: Double, second: Double)
+public typealias LineColors = (first: UIColor, second: UIColor)
 
 func Init<T>( _ object: T, block: (T) throws -> ()) rethrows -> T{
     try block(object)

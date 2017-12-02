@@ -52,3 +52,14 @@ extension Double {
         return self * 180.0 / (.pi)
     }
 }
+
+extension UIColor {
+    class func rgb(_ rgbColor: Int) -> UIColor{
+        return UIColor(
+            red:   CGFloat((rgbColor & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbColor & 0x00FF00) >> 8 ) / 255.0,
+            blue:  CGFloat((rgbColor & 0x0000FF) >> 0 ) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+}

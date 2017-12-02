@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		261A6A221D1DF8DB0040EBBC /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A191D1DF8DB0040EBBC /* FaveButton.swift */; };
-		261A6A231D1DF8DB0040EBBC /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1A1D1DF8DB0040EBBC /* FaveIcon.swift */; };
+		261A6A221D1DF8DB0040EBBC /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A191D1DF8DB0040EBBC /* HeartButton.swift */; };
+		261A6A231D1DF8DB0040EBBC /* HeartIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1A1D1DF8DB0040EBBC /* HeartIcon.swift */; };
 		261A6A241D1DF8DB0040EBBC /* Constraints+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1C1D1DF8DB0040EBBC /* Constraints+.swift */; };
 		261A6A251D1DF8DB0040EBBC /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1D1D1DF8DB0040EBBC /* Easing.swift */; };
 		261A6A261D1DF8DB0040EBBC /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1E1D1DF8DB0040EBBC /* Geometry.swift */; };
 		261A6A271D1DF8DB0040EBBC /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1F1D1DF8DB0040EBBC /* Init.swift */; };
-		261A6A281D1DF8DB0040EBBC /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A201D1DF8DB0040EBBC /* Ring.swift */; };
-		261A6A291D1DF8DB0040EBBC /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A211D1DF8DB0040EBBC /* Spark.swift */; };
+		261A6A281D1DF8DB0040EBBC /* HeartRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A201D1DF8DB0040EBBC /* HeartRing.swift */; };
+		261A6A291D1DF8DB0040EBBC /* HeartSpark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A211D1DF8DB0040EBBC /* HeartSpark.swift */; };
 		261A6A2A1D1DF9050040EBBC /* Constraints+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1C1D1DF8DB0040EBBC /* Constraints+.swift */; };
 		261A6A2B1D1DF9050040EBBC /* Easing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1D1D1DF8DB0040EBBC /* Easing.swift */; };
 		261A6A2C1D1DF9050040EBBC /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1E1D1DF8DB0040EBBC /* Geometry.swift */; };
 		261A6A2D1D1DF9050040EBBC /* Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1F1D1DF8DB0040EBBC /* Init.swift */; };
-		261A6A2E1D1DF9050040EBBC /* FaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A191D1DF8DB0040EBBC /* FaveButton.swift */; };
-		261A6A2F1D1DF9050040EBBC /* FaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1A1D1DF8DB0040EBBC /* FaveIcon.swift */; };
-		261A6A301D1DF9050040EBBC /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A201D1DF8DB0040EBBC /* Ring.swift */; };
-		261A6A311D1DF9050040EBBC /* Spark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A211D1DF8DB0040EBBC /* Spark.swift */; };
+		261A6A2E1D1DF9050040EBBC /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A191D1DF8DB0040EBBC /* HeartButton.swift */; };
+		261A6A2F1D1DF9050040EBBC /* HeartIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A1A1D1DF8DB0040EBBC /* HeartIcon.swift */; };
+		261A6A301D1DF9050040EBBC /* HeartRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A201D1DF8DB0040EBBC /* HeartRing.swift */; };
+		261A6A311D1DF9050040EBBC /* HeartSpark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261A6A211D1DF8DB0040EBBC /* HeartSpark.swift */; };
 		26FEF3291D0E158100D75731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FEF3281D0E158100D75731 /* AppDelegate.swift */; };
 		26FEF32B1D0E158100D75731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FEF32A1D0E158100D75731 /* ViewController.swift */; };
 		26FEF32E1D0E158100D75731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26FEF32C1D0E158100D75731 /* Main.storyboard */; };
@@ -32,6 +32,8 @@
 		26FEF3461D0E159B00D75731 /* FaveButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FEF33F1D0E159B00D75731 /* FaveButton.framework */; };
 		26FEF3471D0E159B00D75731 /* FaveButton.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 26FEF33F1D0E159B00D75731 /* FaveButton.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26FEF34F1D0E177900D75731 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FEF34E1D0E177900D75731 /* ImageAsset.swift */; };
+		4C63B6081FD26FF900B2792C /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63B6071FD26FF900B2792C /* StarButton.swift */; };
+		4C63B6091FD26FFE00B2792C /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63B6071FD26FF900B2792C /* StarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,14 +61,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		261A6A191D1DF8DB0040EBBC /* FaveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveButton.swift; sourceTree = "<group>"; };
-		261A6A1A1D1DF8DB0040EBBC /* FaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaveIcon.swift; sourceTree = "<group>"; };
+		261A6A191D1DF8DB0040EBBC /* HeartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		261A6A1A1D1DF8DB0040EBBC /* HeartIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartIcon.swift; sourceTree = "<group>"; };
 		261A6A1C1D1DF8DB0040EBBC /* Constraints+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Constraints+.swift"; sourceTree = "<group>"; };
 		261A6A1D1D1DF8DB0040EBBC /* Easing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Easing.swift; sourceTree = "<group>"; };
 		261A6A1E1D1DF8DB0040EBBC /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		261A6A1F1D1DF8DB0040EBBC /* Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Init.swift; sourceTree = "<group>"; };
-		261A6A201D1DF8DB0040EBBC /* Ring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
-		261A6A211D1DF8DB0040EBBC /* Spark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spark.swift; sourceTree = "<group>"; };
+		261A6A201D1DF8DB0040EBBC /* HeartRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartRing.swift; sourceTree = "<group>"; };
+		261A6A211D1DF8DB0040EBBC /* HeartSpark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartSpark.swift; sourceTree = "<group>"; };
 		26FEF3251D0E158100D75731 /* FaveButtonDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaveButtonDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26FEF3281D0E158100D75731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		26FEF32A1D0E158100D75731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		26FEF3411D0E159B00D75731 /* FaveButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaveButton.h; sourceTree = "<group>"; };
 		26FEF3431D0E159B00D75731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26FEF34E1D0E177900D75731 /* ImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		4C63B6071FD26FF900B2792C /* StarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,11 +105,9 @@
 		261A6A181D1DF8DB0040EBBC /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				4C51C5181FD278B7007343DE /* Star */,
+				4C51C5171FD278AB007343DE /* Heart */,
 				261A6A1B1D1DF8DB0040EBBC /* Helpers */,
-				261A6A191D1DF8DB0040EBBC /* FaveButton.swift */,
-				261A6A1A1D1DF8DB0040EBBC /* FaveIcon.swift */,
-				261A6A201D1DF8DB0040EBBC /* Ring.swift */,
-				261A6A211D1DF8DB0040EBBC /* Spark.swift */,
 			);
 			name = Source;
 			path = ../Source;
@@ -173,6 +174,25 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		4C51C5171FD278AB007343DE /* Heart */ = {
+			isa = PBXGroup;
+			children = (
+				261A6A191D1DF8DB0040EBBC /* HeartButton.swift */,
+				261A6A1A1D1DF8DB0040EBBC /* HeartIcon.swift */,
+				261A6A201D1DF8DB0040EBBC /* HeartRing.swift */,
+				261A6A211D1DF8DB0040EBBC /* HeartSpark.swift */,
+			);
+			path = Heart;
+			sourceTree = "<group>";
+		};
+		4C51C5181FD278B7007343DE /* Star */ = {
+			isa = PBXGroup;
+			children = (
+				4C63B6071FD26FF900B2792C /* StarButton.swift */,
+			);
+			path = Star;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,18 +251,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Jansel Valentin";
 				TargetAttributes = {
 					26FEF3241D0E158100D75731 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9T9Q2EVV88;
-						LastSwiftMigration = 0800;
+						DevelopmentTeam = 7DVG8XN4BQ;
+						LastSwiftMigration = 0910;
 					};
 					26FEF33E1D0E159B00D75731 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 9T9Q2EVV88;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0910;
 					};
 				};
 			};
@@ -291,14 +311,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				261A6A271D1DF8DB0040EBBC /* Init.swift in Sources */,
-				261A6A221D1DF8DB0040EBBC /* FaveButton.swift in Sources */,
+				261A6A221D1DF8DB0040EBBC /* HeartButton.swift in Sources */,
 				261A6A241D1DF8DB0040EBBC /* Constraints+.swift in Sources */,
 				26FEF32B1D0E158100D75731 /* ViewController.swift in Sources */,
-				261A6A231D1DF8DB0040EBBC /* FaveIcon.swift in Sources */,
+				4C63B6091FD26FFE00B2792C /* StarButton.swift in Sources */,
+				261A6A231D1DF8DB0040EBBC /* HeartIcon.swift in Sources */,
 				261A6A261D1DF8DB0040EBBC /* Geometry.swift in Sources */,
-				261A6A281D1DF8DB0040EBBC /* Ring.swift in Sources */,
+				261A6A281D1DF8DB0040EBBC /* HeartRing.swift in Sources */,
 				261A6A251D1DF8DB0040EBBC /* Easing.swift in Sources */,
-				261A6A291D1DF8DB0040EBBC /* Spark.swift in Sources */,
+				261A6A291D1DF8DB0040EBBC /* HeartSpark.swift in Sources */,
 				26FEF34F1D0E177900D75731 /* ImageAsset.swift in Sources */,
 				26FEF3291D0E158100D75731 /* AppDelegate.swift in Sources */,
 			);
@@ -312,10 +333,11 @@
 				261A6A2B1D1DF9050040EBBC /* Easing.swift in Sources */,
 				261A6A2C1D1DF9050040EBBC /* Geometry.swift in Sources */,
 				261A6A2D1D1DF9050040EBBC /* Init.swift in Sources */,
-				261A6A2E1D1DF9050040EBBC /* FaveButton.swift in Sources */,
-				261A6A2F1D1DF9050040EBBC /* FaveIcon.swift in Sources */,
-				261A6A301D1DF9050040EBBC /* Ring.swift in Sources */,
-				261A6A311D1DF9050040EBBC /* Spark.swift in Sources */,
+				4C63B6081FD26FF900B2792C /* StarButton.swift in Sources */,
+				261A6A2E1D1DF9050040EBBC /* HeartButton.swift in Sources */,
+				261A6A2F1D1DF9050040EBBC /* HeartIcon.swift in Sources */,
+				261A6A301D1DF9050040EBBC /* HeartRing.swift in Sources */,
+				261A6A311D1DF9050040EBBC /* HeartSpark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +380,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -388,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -405,14 +433,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -429,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -444,13 +478,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7DVG8XN4BQ;
 				INFOPLIST_FILE = FaveButtonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xhamr.FaveButtonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -461,13 +497,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7DVG8XN4BQ;
 				INFOPLIST_FILE = FaveButtonDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xhamr.FaveButtonDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -489,7 +527,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -513,7 +552,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.xhamr.FaveButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

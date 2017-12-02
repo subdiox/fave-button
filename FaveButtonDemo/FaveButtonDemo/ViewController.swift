@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  FaveButtonDemo
+//  HeartButtonDemo
 //
 //  Created by Jansel Valentin on 6/12/16.
 //  Copyright © 2016 Jansel Valentin. All rights reserved.
@@ -8,7 +8,6 @@
 
 import UIKit
 import FaveButton
-
 
 func color(_ rgbColor: Int) -> UIColor{
     return UIColor(
@@ -19,10 +18,10 @@ func color(_ rgbColor: Int) -> UIColor{
     )
 }
 
-class ViewController: UIViewController, FaveButtonDelegate{
+class ViewController: UIViewController {
     
-    @IBOutlet var heartButton: FaveButton?
-    @IBOutlet var loveButton : FaveButton?
+    @IBOutlet var heartButton: HeartButton?
+    @IBOutlet var loveButton : HeartButton?
     
     let colors = [
         DotColors(first: color(0x7DC2F4), second: color(0xE2264D)),
@@ -32,15 +31,25 @@ class ViewController: UIViewController, FaveButtonDelegate{
         DotColors(first: color(0xF68FA7), second: color(0xF6A2B8))
     ]
     
-    func faveButton(_ faveButton: FaveButton, didSelected selected: Bool){
+    func heartButton(_ heartButton: HeartButton, didSelected selected: Bool){
     }
     
-    func faveButtonDotColors(_ faveButton: FaveButton) -> [DotColors]?{
-        if( faveButton === heartButton || faveButton === loveButton){
+    func heartButtonDotColors(_ heartButton: HeartButton) -> [DotColors]?{
+        if( heartButton === heartButton || heartButton === loveButton){
             return colors
         }
         return nil
     }
+    
+    @IBAction func tappedStarButton(sender: StarButton) {
+        sender.toggle()
+    }
+    
+    @IBAction func tappedHeartButton(sender: HeartButton) {
+        sender.toggle()
+    }
+    
+    
 }
 
 
