@@ -2,7 +2,8 @@
 Favorite Animated Button written in Swift  
 (Forked from [fave-button](https://github.com/xhamr/yosei-yamagishi/fave-button) and [DOFavoriteButton](https://github.com/okmr-d/DOFavoriteButton))
 
-![preview](https://github.com/xhamr/fave-button/blob/master/fave-button1.gif)
+![star](https://raw.githubusercontent.com/okmr-d/okmr-d.github.io/master/img/DOFavoriteButton/demo.gif)
+![heart](https://github.com/xhamr/fave-button/blob/master/fave-button1.gif)
 
 
 ## Requirements
