@@ -1,15 +1,9 @@
 # FaveButton
+Favorite Animated Button written in Swift  
+(Forked from [fave-button](https://github.com/xhamr/yosei-yamagishi/fave-button) and [DOFavoriteButton](https://github.com/okmr-d/DOFavoriteButton))
 
-[![CocoaPods](https://img.shields.io/cocoapods/p/FaveButton.svg)](https://cocoapods.org/pods/FaveButton)
-[![CocoaPods](https://img.shields.io/cocoapods/v/FaveButton.svg)](http://cocoapods.org/pods/FaveButton)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/xhamr/fave-button)
-[![codebeat badge](https://codebeat.co/badges/580517f8-efc8-4d20-89aa-900531610144)](https://codebeat.co/projects/github-com-xhamr-fave-button)
-[![Build Status](https://travis-ci.org/xhamr/fave-button.svg?branch=master)](https://travis-ci.org/xhamr/fave-button)
-
-Favorite Animated Button written in Swift
-
-
-![preview](https://github.com/xhamr/fave-button/blob/master/fave-button1.gif)
+![star](https://raw.githubusercontent.com/okmr-d/okmr-d.github.io/master/img/DOFavoriteButton/demo.gif)
+![heart](https://github.com/xhamr/fave-button/blob/master/fave-button1.gif)
 
 
 ## Requirements
@@ -28,7 +22,7 @@ pod 'FaveButton', '~> 1.2.1' swift 2.2
 
 pod 'FaveButton', '~> 2.0.3' swift 3
 
-pod 'FaveButton', '~> 2.0.4' swift 4
+pod 'FaveButton', '~> 3.0' swift 4
 ```
 
 for [Carthage](https://github.com/Carthage/Carthage) users, add this line to you `Cartfile`
@@ -37,82 +31,62 @@ for [Carthage](https://github.com/Carthage/Carthage) users, add this line to you
 github "subdiox/fave-button"
 ```
 
+## How to use
+#### 1. Add a flat icon image
+![Flat Icon Image](https://raw.githubusercontent.com/okmr-d/okmr-d.github.io/master/img/DOFavoriteButton/flatIconImage.png)
 
-## Usage
-
-#### With storyboard or xib files
-
-1) Create a Button that inherits from `FaveButton`
-
-2) Add Image for a `Normal` state
-
-3) Set the `IBOutlet` delegate property to a subclass of `FaveButtonDelegate`
-
-4) ___Optional___ manipulate porperties to change button settings
-
+#### 2. Create a button
+##### ・By coding
 ```swift
-@IBInspectable public var normalColor:     UIColor
-@IBInspectable public var selectedColor:   UIColor
-@IBInspectable public var dotFirstColor:   UIColor
-@IBInspectable public var dotSecondColor:  UIColor
-@IBInspectable public var circleFromColor: UIColor
-@IBInspectable public var circleToColor:   UIColor
-```
- 
- 5) ___Optional___ respond to delegate methods
+let starButton = StarButton(frame: CGRectMake(0, 0, 44, 44), image: UIImage(named: "star.png"))
+self.view.addSubview(starButton)
 
- ```swift
-func faveButton(faveButton: FaveButton, didSelected selected: Bool)    
-func faveButtonDotColors(faveButton: FaveButton) -> [DotColors]?     
- ```
-
-
-#### In Code
-
-```swift
-let faveButton = FaveButton(
-    frame: CGRect(x:200, y:200, width: 44, height: 44),
-    faveIconNormal: UIImage(named: "heart")
-)
-faveButton.delegate = self
-view.addSubview(faveButton)
+let heartButton = HeartButton(frame: CGRectMake(0, 0, 44, 44), image: UIImage(named: "heart.png"))
+self.view.addSubview(heartButton)
 ```
 
-## Manipulating dot colors
+##### ・By using Storyboard or XIB
+1. Add Button object and set Custom Class `StarButton` or `HeartButton`  
+![via Storyboard](https://raw.githubusercontent.com/okmr-d/okmr-d.github.io/master/img/DOFavoriteButton/storyboard.png)
 
-If you want differents colors for dots like `Twitter’s Heart Animation` use the delegate method for the button you want.
+2. Connect Outlet  
+![connect outlet](https://raw.githubusercontent.com/okmr-d/okmr-d.github.io/master/img/DOFavoriteButton/connect.png)
 
+#### 3. Add tapped function
 ```swift
-func faveButtonDotColors(_ faveButton: FaveButton) -> [DotColors]?{
-	if faveButton == myFaveButton{
-		// return dot colors
-	}
-	return nil
+starButton.addTarget(self, action: Selector("starTapped:"), forControlEvents: .TouchUpInside)
+heartButton.addTarget(self, action: Selector("heartTapped:"), forControlEvents: .TouchUpInside)
+```
+```swift
+func starTapped(sender: StarButton) {
+    sender.toggle()
+    
+    /* Write here anything you want to do after the button is tapped */
+}
+
+func heartTapped(sender: HeartButton) {
+    sender.toggle()
+    
+    /* Write here anything you want to do after the button is tapped */
 }
 ```
 
-in [FaveButtonDemo](https://github.com/xhamr/fave-button/tree/master/FaveButtonDemo) you will find a set of color to cause dots appear like this:
+## Customize
+You can change button color & animation duration:
+```swift
+button.normalColor = UIColor.brownColor()
+button.selectedColor = UIColor.redColor()
+button.circleColor = UIColor.greenColor()
+button.lineColor = UIColor.blueColor()
+```
+Result:  
+![Customize](https://raw.githubusercontent.com/okmr-d/okmr-d.github.io/master/img/DOFavoriteButton/changeColor.gif)
 
-![preview](https://github.com/xhamr/fave-button/blob/master/fave-button2.gif)
-
-
+## DEMO
+There is a demo project added to this repository, so you can see how it works.
 
 ## Credits
-
 FaveButton was inspired by Twitter’s Like Heart Animation within their [App](https://itunes.apple.com/us/app/twitter/id333903271)
 
-
 ## Licence
-
 FaveButton is released under the MIT license.
-
-
-
-
-
-
-
-
-
-
-
