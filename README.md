@@ -21,7 +21,7 @@ pod 'FaveButton', '~> 1.2.1' swift 2.2
 
 pod 'FaveButton', '~> 2.0.3' swift 3
 
-pod 'FaveButton', '~> 2.0.4' swift 4
+pod 'FaveButton', '~> 3.0' swift 4
 ```
 
 for [Carthage](https://github.com/Carthage/Carthage) users, add this line to you `Cartfile`
