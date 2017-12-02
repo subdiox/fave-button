@@ -34,8 +34,8 @@
 		26FEF34F1D0E177900D75731 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FEF34E1D0E177900D75731 /* ImageAsset.swift */; };
 		4C63B6081FD26FF900B2792C /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63B6071FD26FF900B2792C /* StarButton.swift */; };
 		4C63B6091FD26FFE00B2792C /* StarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C63B6071FD26FF900B2792C /* StarButton.swift */; };
-		4CE3698F1FD2A5DE0057FAC4 /* StarButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 4C63B6071FD26FF900B2792C /* StarButton.swift */; };
-		4CE369901FD2A5DE0057FAC4 /* HeartButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 261A6A191D1DF8DB0040EBBC /* HeartButton.swift */; };
+		4CE3698F1FD2A5DE0057FAC4 /* StarButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 4C63B6071FD26FF900B2792C /* StarButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CE369901FD2A5DE0057FAC4 /* HeartButton.swift in Headers */ = {isa = PBXBuildFile; fileRef = 261A6A191D1DF8DB0040EBBC /* HeartButton.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
