@@ -170,9 +170,9 @@ extension HeartButton {
         heartIcon.animateSelect(isSelected, fillColor: color, duration: duration, delay: Const.heartIconShowDelay)
         
         if isSelected {
-            let radius           = bounds.size.scaleBy(1.86).width / 2 // ring radius
-            let igniteFromRadius = radius * 0.8
-            let igniteToRadius   = radius * 1.1
+            let radius           = bounds.size.scaleBy(1.7).width / 2 // ring radius
+            let igniteFromRadius = radius * 0.85
+            let igniteToRadius   = radius * 1.05
             
             let ring = HeartRing.createHeartRing(self, radius: 0.01, lineWidth: 3, fillColor: self.circleFromColor)
             let sparks = createHeartSparks(igniteFromRadius)
